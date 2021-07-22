@@ -51,6 +51,11 @@ class HomeActivity : AppCompatActivity(), PermissionRequestFragment.Callbacks,
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        return super.onSupportNavigateUp()
+        onBackPressed()
+    }
+
     // Triggered from the permission Fragment that it's the app has permissions to display the
     // location fragment.
     override fun displayLocationUI() {

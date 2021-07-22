@@ -13,6 +13,9 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.example.location.R
+import com.example.location.current_location_kotlin.CurrentLocationActivity
+import com.example.location.location_updates_background.ui.HomeActivity
+import com.example.location.location_updates_foreground_service.LocationUpdateActivity
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 import com.google.android.material.snackbar.Snackbar
@@ -172,6 +175,18 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    fun getCurrentLocation(view: View) {
+        startActivity(Intent(this,CurrentLocationActivity::class.java))
+    }
+
+    fun getBackgroundLocation(view: View) {
+        startActivity(Intent(this,HomeActivity::class.java))
+    }
+
+    fun getForegroundLocation(view: View) {
+        startActivity(Intent(this, LocationUpdateActivity::class.java))
     }
 
 }

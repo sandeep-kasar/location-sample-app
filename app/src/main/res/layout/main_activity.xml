@@ -16,6 +16,7 @@
         android:layout_marginLeft="@dimen/margin_start"
         android:layout_marginStart="@dimen/margin_start"
         android:textIsSelectable="true"
+        android:text="@string/latitude_label"
         android:textSize="@dimen/lat_long_text_size" />
 
     <TextView
@@ -26,5 +27,40 @@
         android:layout_marginStart="@dimen/margin_start"
         android:layout_marginTop="@dimen/text_margin"
         android:textIsSelectable="true"
+        android:text="@string/longitude_label"
         android:textSize="@dimen/lat_long_text_size" />
+
+    <TextView
+        android:textStyle="bold"
+        android:background="@color/purple_200"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="getCurrentLocation"
+        android:text="Current Location"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"></TextView>
+
+    <TextView
+        android:textStyle="bold"
+        android:background="@color/purple_200"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="getBackgroundLocation"
+        android:text="Background Location"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"></TextView>
+
+    <TextView
+        android:textStyle="bold"
+        android:background="@color/purple_200"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:onClick="getForegroundLocation"
+        android:text="Foreground Location"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"></TextView>
+
 </LinearLayout>

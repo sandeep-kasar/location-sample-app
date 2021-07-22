@@ -98,6 +98,11 @@ class LocationUpdateActivity : AppCompatActivity(), OnSharedPreferenceChangeList
         }
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        return super.onSupportNavigateUp()
+        onBackPressed()
+    }
+
     override fun onStart() {
         super.onStart()
         PreferenceManager.getDefaultSharedPreferences(this)

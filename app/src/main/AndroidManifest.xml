@@ -15,11 +15,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".location_updates_foreground_service.LocationUpdateActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <service
@@ -29,7 +24,12 @@
             android:foregroundServiceType="location"></service>
 
         <activity android:name=".current_location_kotlin.CurrentLocationActivity" />
-        <activity android:name=".basic_location_kotlin.MainActivity" />
+        <activity android:name=".basic_location_kotlin.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".location_updates_background.ui.HomeActivity">
         </activity>
 

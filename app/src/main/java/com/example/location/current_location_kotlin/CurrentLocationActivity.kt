@@ -63,6 +63,11 @@ class CurrentLocationActivity : AppCompatActivity() {
         setContentView(binding.root)
     }
 
+    override fun onSupportNavigateUp(): Boolean {
+        return super.onSupportNavigateUp()
+        onBackPressed()
+    }
+
     override fun onStop() {
         super.onStop()
         // Cancels location request (if in flight).
